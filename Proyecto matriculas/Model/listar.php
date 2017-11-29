@@ -6,14 +6,13 @@ class listar
 
 		//Atributos del objeto alumno
     public $id_alumno;
-    public $nombres;
-    public $a_paterno;
-    public $a_materno;
-    public $rut;
+    public $nombres_a;
+    public $a_paternoa;
+    public $a_maternoa;
     public $sexo;
     public $fech_nacimiento;
-    public $direccion;
-    public $comuna;
+    public $direccion_a;
+    public $comuna_a;
 
 	//Método de conexión a SGBD.
 	public function __CONSTRUCT()
@@ -39,7 +38,7 @@ class listar
 		{
 			$result = array();
 			//Sentencia SQL para selección de datos.
-			$stm = $this->pdo->prepare("SELECT alumno.id_alumno,alumno.nombres,alumno.a_paterno,alumno.a_materno,alumno.rut_a,curso.nombre_curso FROM alumno inner join matricula on alumno.id_alumno=matricula.id_alumno inner join curso on curso.id_curso=matricula.id_curso");
+			$stm = $this->pdo->prepare("SELECT alumno.id_alumno,alumno.nombres_a,alumno.a_paternoa,alumno.a_maternoa,alumno.rut_a,curso.nombre_curso FROM alumno inner join matricula on alumno.id_alumno=matricula.id_alumno inner join curso on curso.id_curso=matricula.id_curso");
 			//Ejecución de la sentencia SQL.
 			$stm->execute();
 			//fetchAll — Devuelve un array que contiene todas las filas del conjunto

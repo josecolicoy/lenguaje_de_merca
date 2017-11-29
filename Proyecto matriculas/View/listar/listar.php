@@ -14,8 +14,8 @@
     <?php foreach($this->model->Lista() as $r): ?>
         <tr>
             <th class="thicker"><?php echo $r->id_alumno; ?></th>
-            <th class="thicker"><?php echo $r->nombres,' ', $r->a_paterno,' ', $r->a_materno;?></th>
-            <th class="thicker"><?php echo $r->rut; ?></th>
+            <th class="thicker"><?php echo $r->nombres_a,' ', $r->a_paternoa,' ', $r->a_maternoa;?></th>
+            <th class="thicker"><?php echo $r->rut_a; ?></th>
             <th class="thicker"><?php echo $r->nombre_curso; ?></th>
 
             <th class="thicker"></th>
