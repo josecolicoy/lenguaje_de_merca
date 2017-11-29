@@ -13,56 +13,50 @@
 
     <div class="form-group">
       <label>Nombres</label>
-      <input type="text" name="nombres_a" class="form-control" placeholder="Ingrese nombres alumno"  />
+      <input type="text" name="nombres_a" class="form-control" placeholder="Nombres Alumno" style="width: 605px;" />
     </div>
 
-    <div class="form-group">
-        <label>Apellidos Paternos</label>
-        <input type="text" name="a_paternoa" class="form-control" placeholder="Ingrese Apellidos Paternos"  />
-    </div>
-
-    <div class="form-group">
-        <label>Apellidos Maternos</label>
-        <input type="text" name="a_maternoa" class="form-control" placeholder="Ingrese Apellidos Materno"  />
+    <div class="form-inline">
+        <label>Apellidos Paternos</label><br>
+        <input type="text" name="a_paternoa" class="form-control" placeholder="Apellidos Paterno" style="width: 300px;" />
+        <input type="text" name="a_maternoa" class="form-control" placeholder="Apellido Materno" style="width: 300px;" />
     </div>
 
     <div class="form-group">
         <label>Rut</label>
-        <input type="text" name="rut_a" class="form-control" placeholder="Ingrese Rut"  />
+        <input type="text" name="rut_a" class="form-control" placeholder="EJ: 19463758-k   (añadir guion)" style="width: 605px;"  />
     </div>
 
     <div class="form-group">
         <label>Sexo</label>
-        <input type="text" name="sexo" class="form-control" placeholder="Ingrese sexo"  />
+        <input type="text" name="sexo" class="form-control" placeholder="M/F    Masculino/Femenino" style="width: 605px;" />
     </div>
 
     <div class="form-group">
         <label>fech_nacimiento</label>
-        <input type="text" name="fech_nacimiento" class="form-control" placeholder="Ingrese fech_nacimiento"  />
+        <input type="text" name="fech_nacimiento" class="form-control" placeholder="Fecha Nacimiento DD/MM/AA" id="datepicker" style="width: 605px;"/>
     </div>
 
     <div class="form-group">
         <label>direccion</label>
-        <input type="text" name="direccion_a" class="form-control" placeholder="Ingrese direccion especificando sector"  />
+        <input type="text" name="direccion_a" class="form-control" placeholder="EJ: Bulnes #1535 Sector Alcantara" style="width: 605px;" />
     </div>
 
     <div class="form-group">
         <label>Comuna</label>
-        <input type="text" name="comuna_a" class="form-control" placeholder="Ingrese comuna"  />
+        <input type="text" name="comuna_a" class="form-control" placeholder="Ingrese Comuna" style="width: 605px;" />
     </div>
 
 
     <hr />
 
-    <div class="text-right">
+    <div class="text-middle">
         <button class="btn btn-success">Siguiente</button>
     </div>
 </form>
 
 <script>
-    $(document).ready(function(){
-        $("#frm-alumno").submit(function(){
-            return $(this).validate();
-        });
-    })
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
 </script>
