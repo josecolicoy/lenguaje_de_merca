@@ -1,0 +1,65 @@
+
+<ol class="breadcrumb">
+  <li><a href="?c=alumno">Alumno</a></li>
+  <li class="active"><?php echo $alu->id_alumno != null ? $alu->nombres_a : 'Nuevo Registro'; ?></li>
+</ol>
+
+<form id="frm-alumno" action="?c=alumno&a=Editar" method="post" enctype="multipart/form-data">
+    
+    <input type="hidden" name="id_alumno" value="<?php echo $alu->id_alumno; ?>" />
+
+        <div class="form-group">
+      <label>Nombres</label>
+      <input type="text" name="nombres_a" value="<?php echo $alu->nombres_a; ?>" class="form-control" placeholder="Ingrese nombres alumno"  />
+    </div>
+
+    <div class="form-group">
+        <label>Apellidos Paternos</label>
+        <input type="text" name="a_paternoa" value="<?php echo $alu->a_paternoa; ?>" class="form-control" placeholder="Ingrese Apellidos Paternos"  />
+    </div>
+
+    <div class="form-group">
+        <label>Apellidos Maternos</label>
+        <input type="text" name="a_maternoa" value="<?php echo $alu->a_maternoa; ?>" class="form-control" placeholder="Ingrese Apellidos Materno"  />
+    </div>
+
+    <div class="form-group">
+        <label>Rut</label>
+        <input type="text" name="rut_a" value="<?php echo $alu->rut_a; ?>" class="form-control" placeholder="Ingrese Rut"  />
+    </div>
+
+    <div class="form-group">
+        <label>Sexo</label>
+        <input type="text" name="sexo" value="<?php echo $alu->sexo; ?>" class="form-control" placeholder="Ingrese sexo"  />
+    </div>
+
+    <div class="form-group">
+        <label>fech_nacimiento</label>
+        <input type="text" name="fech_nacimiento" value="<?php echo $alu->fech_nacimiento; ?>" class="form-control" placeholder="Ingrese fech_nacimiento"  />
+    </div>
+
+    <div class="form-group">
+        <label>direccion</label>
+        <input type="text" name="direccion_a" value="<?php echo $alu->direccion_a; ?>" class="form-control" placeholder="Ingrese direccion especificando sector"  />
+    </div>
+
+    <div class="form-group">
+        <label>Comuna</label>
+        <input type="text" name="comuna_a" value="<?php echo $alu->comuna_a; ?>" class="form-control" placeholder="Ingrese comuna"  />
+    </div>
+
+
+    <hr />
+
+    <div class="text-right">
+        <button class="btn btn-success">Actualizar</button>
+    </div>
+</form>
+
+<script>
+    $(document).ready(function(){
+        $("#frm-alumn").submit(function(){
+            return $(this).validate();
+        });
+    })
+</script>

@@ -1,0 +1,60 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+#formulario{
+	width: 450px;
+	height: 350px;
+	margin: 0 auto;
+	border: 2px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+}
+#bane{
+	width: 100%;
+	height: 34px;
+	background-color: grey;
+}
+#bane p{
+	font-size: 20px;
+	font-style: oblique;
+	font-weight: bold;
+	margin-left: 30px;
+	margin-top: 2px;
+	color:white;
+}
+#cprin{
+	width: 660px;
+	height: 120px;
+	margin: 50px auto;
+}
+#cprin #c1{
+	width: 200px;
+	height: 100px;
+	background-color: #D95858;
+	border: 2px solid black;
+	border-radius: 5px;
+	position: relative;
+	float: left;
+}
+#cprin #c2{
+	width: 200px;
+	height: 100px;
+	background-color: #A3D65F;
+	border: 2px solid black;
+	border-radius: 5px;
+	position: relative;
+	float: left;
+	left: 10px;
+}
+#cprin #c3{
+	width: 200px;
+	height: 100px;
+	background-color: #5FD6D4;
+	border: 2px solid black;
+	border-radius: 5px;
+	position: relative;
+	float: left;
+	left: 20px;
+}
+

@@ -1,0 +1,11 @@
+           tereas                                                    |      Responsable
+---------------------------------------------------------------------------------------------
+-los CRUD para los distintos datos a ingresar de un alumno           |-
+-verificacion de datos ingresados, como el telefono, el rut... etc   |-
+- implementacion de libreria para generar select con calendario      |-
+-modulo listar que ahi aparecera una lista con solo los nombres y    |-
+ ruts de los alumnos con sus numeros de matriculas, que tendra un    |
+ boton similar a EDITAR pero este generara un documento pdf con      |
+ formato del formulario                                              |
+- modulo graficar que graficara distintas estadisticas sacando datos |-
+  desde la base de datos                                             |
