@@ -9,6 +9,7 @@ class listar
     public $nombres_a;
     public $a_paternoa;
     public $a_maternoa;
+    public $rut_a;
     public $sexo;
     public $fech_nacimiento;
     public $direccion_a;
