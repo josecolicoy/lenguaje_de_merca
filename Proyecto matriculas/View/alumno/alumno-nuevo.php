@@ -18,7 +18,7 @@
 
     <div class="form-inline">
         <label>Apellidos Paternos</label><br>
-        <input type="text" name="a_paternoa" class="form-control" placeholder="Apellidos Paterno" style="width: 300px;" />
+        <input type="text" name="a_paternoa" class="form-control" placeholder="Apellido Paterno" style="width: 300px;" />
         <input type="text" name="a_maternoa" class="form-control" placeholder="Apellido Materno" style="width: 300px;" />
     </div>
 
