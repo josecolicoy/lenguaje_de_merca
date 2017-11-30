@@ -9,7 +9,7 @@
 
         <div class="form-group">
       <label>fecha</label>
-      <input type="text" name="fecha" value="<?php echo $pdr->fecha; ?>" class="form-control" placeholder="Ingrese fecha de matricula"  />
+      <input type="text" name="fecha" value="<?php echo $pdr->fecha; ?>" class="form-control" placeholder="Ingrese fecha de matricula"  id="datepicker" />
     </div>
 
     <div class="form-group">
@@ -32,4 +32,9 @@
             return $(this).validate();
         });
     })
+</script>
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
 </script>

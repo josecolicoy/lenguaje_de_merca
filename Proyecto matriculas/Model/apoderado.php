@@ -40,7 +40,7 @@ class apoderado
 		{
 			$result = array();
 			//Sentencia SQL para selección de datos.
-			$stm = $this->pdo->prepare("SELECT * FROM `apoderado`  INNER JOIN alumno ON alumno.id_alumno=apoderado.id_alumno");
+			$stm = $this->pdo->prepare("SELECT * FROM `apoderado`  INNER JOIN alumno ON alumno.id_alumno=apoderado.id_alumno inner join grupo_familiar on apoderado.id_grupo= grupo_familiar.id_grupo");
 			//Ejecución de la sentencia SQL.
 			$stm->execute();
 			//fetchAll — Devuelve un array que contiene todas las filas del conjunto
@@ -98,8 +98,8 @@ class apoderado
 			//Sentencia SQL para actualizar los datos.
 			$sql = "UPDATE apoderado SET
 							nombres      =?,
-							a.paterno    =?,
-							a.materno    =?,
+							a_paterno    =?,
+							a_materno    =?,
 							rut_ap       =?,
 							parentesco   =?,
 							fecha_nacap  =?,
@@ -142,7 +142,7 @@ class apoderado
 		try
 		{
 			//Sentencia SQL.
-			$sql = "INSERT INTO apoderado (id_apoderado, nombres, a.paterno, a.materno, rut_ap, parentesco, fecha_nacap, telefono_ap, tipo, id_grupo, direccion, comuna, id_alumno)
+			$sql = "INSERT INTO apoderado (id_apoderado, nombres, a_paterno, a_materno, rut_ap, parentesco, fecha_nacap, telefono_ap, tipo, id_grupo, direccion, comuna, id_alumno)
 		        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 			$this->pdo->prepare($sql)

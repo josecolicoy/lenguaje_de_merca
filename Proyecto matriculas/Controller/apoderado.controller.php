@@ -48,14 +48,18 @@ class ApoderadoController{
         $apo = new apoderado();
 
         //Captura de los datos del formulario (vista).
-        $apo->nombres_a = $_REQUEST['nombres_a'];
-        $apo->a_paternoa = $_REQUEST['a_paternoa'];
-        $apo->a_maternoa = $_REQUEST['a_maternoa'];
-        $apo->sexo = $_REQUEST['sexo'];
-        $apo->rut_a = $_REQUEST['rut_a'];
-        $apo->fech_nacimiento = $_REQUEST['fech_nacimiento'];
-        $apo->direccion_a = $_REQUEST['direccion_a'];
-        $apo->comuna_a = $_REQUEST['comuna_a'];
+        $apo->nombres = $_REQUEST['nombres'];
+        $apo->a_paternoa = $_REQUEST['a_paterno'];
+        $apo->a_maternoa = $_REQUEST['a_materno'];
+        $apo->telefono = $_REQUEST['telefono_ap'];
+        $apo->rut_a = $_REQUEST['rut_ap'];
+        $apo->parentesco = $_REQUEST['parentesco'];
+        $apo->tipo = $_REQUEST['tipo'];
+        $apo->fech_nacimiento = $_REQUEST['fecha_nacap'];
+        $apo->direccion_a = $_REQUEST['direccion'];
+        $apo->comuna = $_REQUEST['comuna'];
+        $apo->id_grupo = $_REQUEST['id_grupo'];
+        $apo->id_alumno = $_REQUEST['id_alumno'];
 
         //Registro al modelo apoderado.
         $this->model->Registrar($apo);
@@ -72,14 +76,18 @@ class ApoderadoController{
         $apo = new apoderado();
 
         $apo->id_apoderado = $_REQUEST['id_apoderado'];
-        $apo->nombres_a = $_REQUEST['nombres_a'];
-        $apo->a_paternoa = $_REQUEST['a_paternoa'];
-        $apo->a_maternoa = $_REQUEST['a_maternoa'];
-        $apo->sexo = $_REQUEST['sexo'];
-        $apo->rut_a = $_REQUEST['rut_a'];
-        $apo->fech_nacimiento = $_REQUEST['fech_nacimiento'];
-        $apo->direccion_a = $_REQUEST['direccion_a'];
-        $apo->comuna_a = $_REQUEST['comuna_a'];
+        $apo->nombres = $_REQUEST['nombres'];
+        $apo->a_paterno = $_REQUEST['a_paterno'];
+        $apo->a_materno = $_REQUEST['a_materno'];
+        $apo->telefono_ap = $_REQUEST['telefono_ap'];
+        $apo->rut_ap = $_REQUEST['rut_ap'];
+        $apo->parentesco = $_REQUEST['parentesco'];
+        $apo->tipo = $_REQUEST['tipo'];
+        $apo->fecha_nacap = $_REQUEST['fecha_nacap'];
+        $apo->direccion= $_REQUEST['direccion'];
+        $apo->comuna= $_REQUEST['comuna'];
+        $apo->id_grupo = $_REQUEST['id_grupo'];
+        $apo->id_alumno = $_REQUEST['id_alumno'];
 
         $this->model->Actualizar($apo);
         //echo("<script>console.log('PHP: ".json_encode($apo)."');</script>"); 

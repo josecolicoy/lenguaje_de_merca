@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2017 a las 22:53:52
+-- Tiempo de generación: 30-11-2017 a las 13:59:02
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 5.6.31
 
@@ -35,7 +35,7 @@ CREATE TABLE `alumno` (
   `a_maternoa` varchar(20) NOT NULL,
   `rut_a` varchar(10) NOT NULL,
   `sexo` varchar(2) NOT NULL,
-  `fech_nacimiento` date NOT NULL,
+  `fech_nacimiento` varchar(30) NOT NULL,
   `direccion_a` varchar(30) NOT NULL,
   `comuna_a` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -47,7 +47,9 @@ CREATE TABLE `alumno` (
 INSERT INTO `alumno` (`id_alumno`, `nombres_a`, `a_paternoa`, `a_maternoa`, `rut_a`, `sexo`, `fech_nacimiento`, `direccion_a`, `comuna_a`) VALUES
 (2, 'jose ignacio', 'colicoy', 'cabrera', '123123123', 'M', '0000-00-00', 'ranquilco bajo', 'nueva imperial'),
 (4, 'fdsfdsfds', 'asdasdasd', 'asdasdasda', '123123312', 'sa', '0000-00-00', 'a', 'jsahdjsadh'),
-(6, 'jkdjsakjkasjkdjasjk', 'jkjskdjaskjdlkasjdkl', 'kjdklsajkldjaslkdjas', 'kjkdjaskjd', 'kj', '0000-00-00', 'kjkldjklsajkdjaskldjsakljkl', 'jlj');
+(6, 'jkdjsakjkasjkdjasjk', 'jkjskdjaskjdlkasjdkl', 'kjdklsajkldjaslkdjas', 'kjkdjaskjd', 'kj', '0000-00-00', 'kjkldjklsajkdjaskldjsakljkl', 'jlj'),
+(7, '', '', '', '', '', '0000-00-00', '', ''),
+(8, 'sidjposa', 'doaskdpos', 'matamata', '23134-9', 'm', '11/02/2017', 'lidjas', 'victoria');
 
 -- --------------------------------------------------------
 
@@ -58,8 +60,8 @@ INSERT INTO `alumno` (`id_alumno`, `nombres_a`, `a_paternoa`, `a_maternoa`, `rut
 CREATE TABLE `apoderado` (
   `id_apoderado` int(3) NOT NULL,
   `nombres` varchar(50) NOT NULL,
-  `a.paterno` varchar(20) NOT NULL,
-  `a.materno` varchar(20) NOT NULL,
+  `a_paterno` varchar(20) NOT NULL,
+  `a_materno` varchar(20) NOT NULL,
   `rut_ap` varchar(10) NOT NULL,
   `parentesco` varchar(15) NOT NULL,
   `fecha_nacap` date NOT NULL,
@@ -70,6 +72,13 @@ CREATE TABLE `apoderado` (
   `comuna` varchar(30) NOT NULL,
   `id_alumno` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `apoderado`
+--
+
+INSERT INTO `apoderado` (`id_apoderado`, `nombres`, `a_paterno`, `a_materno`, `rut_ap`, `parentesco`, `fecha_nacap`, `telefono_ap`, `tipo`, `id_grupo`, `direccion`, `comuna`, `id_alumno`) VALUES
+(1, 'hola', 'osdka', 'ospdadk', '12343', 'madre', '2017-11-01', '12312', 'dad', 1, 'dasdasd', 'dassd', 2);
 
 -- --------------------------------------------------------
 
@@ -120,6 +129,13 @@ CREATE TABLE `grupo_familiar` (
   `id_padre` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `grupo_familiar`
+--
+
+INSERT INTO `grupo_familiar` (`id_grupo`, `num_grupo`, `comparte_hogar`, `renta`, `renta_familiar`, `beneficio_estado`, `id_padre`) VALUES
+(1, '223', 'fsfs', '33', '324', 'no', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -128,10 +144,18 @@ CREATE TABLE `grupo_familiar` (
 
 CREATE TABLE `matricula` (
   `id_matricula` int(3) NOT NULL,
-  `fecha` date NOT NULL,
+  `fecha` varchar(30) NOT NULL,
   `id_curso` int(3) NOT NULL,
   `id_alumno` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `matricula`
+--
+
+INSERT INTO `matricula` (`id_matricula`, `fecha`, `id_curso`, `id_alumno`) VALUES
+(1, '2017-11-01', 1, 4),
+(2, '2103-01-20', 12, 2);
 
 -- --------------------------------------------------------
 
@@ -157,7 +181,7 @@ CREATE TABLE `padre` (
 --
 
 INSERT INTO `padre` (`id_padre`, `nombres_p`, `a_paternop`, `a_maternop`, `rut_p`, `telefono`, `genero`, `escolaridad`, `actividad`, `id_alumno`) VALUES
-(1, 'assadsa', 'asdasd', 'asdasd', '128938129', '213871328', 'm', 'cuarto', 'jsahdjashj', 2);
+(1, 'assadsa', 'asdasd', 'asdasd', '128938129', '213871328', 'f', 'cuarto', 'jsahdjashj', 2);
 
 -- --------------------------------------------------------
 
@@ -239,12 +263,12 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `apoderado`
 --
 ALTER TABLE `apoderado`
-  MODIFY `id_apoderado` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_apoderado` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `curso`
 --
@@ -254,12 +278,12 @@ ALTER TABLE `curso`
 -- AUTO_INCREMENT de la tabla `grupo_familiar`
 --
 ALTER TABLE `grupo_familiar`
-  MODIFY `id_grupo` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_grupo` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `matricula`
 --
 ALTER TABLE `matricula`
-  MODIFY `id_matricula` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_matricula` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `padre`
 --
@@ -278,8 +302,8 @@ ALTER TABLE `usuario`
 -- Filtros para la tabla `apoderado`
 --
 ALTER TABLE `apoderado`
-  ADD CONSTRAINT `apoderado_ibfk_2` FOREIGN KEY (`id_grupo`) REFERENCES `grupo_familiar` (`id_grupo`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `apoderado_ibfk_3` FOREIGN KEY (`id_alumno`) REFERENCES `alumno` (`id_alumno`);
+  ADD CONSTRAINT `apoderado_ibfk_3` FOREIGN KEY (`id_alumno`) REFERENCES `alumno` (`id_alumno`),
+  ADD CONSTRAINT `apoderado_ibfk_4` FOREIGN KEY (`id_grupo`) REFERENCES `grupo_familiar` (`id_grupo`);
 
 --
 -- Filtros para la tabla `grupo_familiar`

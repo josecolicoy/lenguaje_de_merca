@@ -32,8 +32,6 @@
             <ul class="nav navbar-nav">
               <li><a href="?c=alumno"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
               <li><a href="?c=listar"><span class="glyphicon glyphicon-user"></span> Listar</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-folder-open"></span> Documentos</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-stats"></span> Graficos</a></li>
             </ul>
             <form class="navbar-form navbar-right">
                   <div class="form-group">
