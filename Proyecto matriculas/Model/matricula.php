@@ -94,7 +94,7 @@ class matricula
             $sql = "UPDATE matricula SET
                         fecha        = ?,
                         id_curso      = ?,
-                        id_alumno      = ?,
+                        id_alumno      = ?
                         WHERE id_matricula = ?";
             //Ejecución de la sentencia a partir de un arreglo.
             $this->pdo->prepare($sql)
@@ -118,8 +118,8 @@ class matricula
         try
         {
             //Sentencia SQL.
-            $sql = "INSERT INTO matricula (fecha,id_curso,id_alumno)
-                VALUES (?, ?, ?)";
+            $sql = "INSERT INTO matricula (id_matricula,fecha,id_curso,id_alumno)
+                VALUES (?,?, ?, ?)";
 
             $this->pdo->prepare($sql)
              ->execute(
