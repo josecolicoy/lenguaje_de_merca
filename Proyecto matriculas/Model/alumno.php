@@ -146,6 +146,7 @@ class alumno
 						$data->comuna_a
                 )
 			);
+		    echo("<script>console.log('PHP: ".json_encode($this->pdo)."');</script>"); 
 		} catch (Exception $e)
 		{
 			die($e->getMessage());

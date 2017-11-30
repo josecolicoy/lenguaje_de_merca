@@ -45,18 +45,18 @@ class PadreController{
 
     //Método que registrar al modelo un nuevo alumno.
     public function Guardar(){
-        $pdr = new alumno();
+        $pdr = new padre();
 
         //Captura de los datos del formulario (vista).
-        $pdr->nombres = $_REQUEST['nombres'];
-        $pdr->a_paterno = $_REQUEST['a_paterno'];
-        $pdr->a_materno = $_REQUEST['a_materno'];
-        $pdr->rut_p = $_REQUEST['rut_p'];
-        $pdr->telefono = $_REQUEST['telefono'];
-        $pdr->genero = $_REQUEST['genero'];
+        $pdr->nombres_p   = $_REQUEST['nombres_p'];
+        $pdr->a_paternop  = $_REQUEST['a_paternop'];
+        $pdr->a_maternop  = $_REQUEST['a_maternop'];
+        $pdr->rut_p       = $_REQUEST['rut_p'];
+        $pdr->telefono    = $_REQUEST['telefono'];
+        $pdr->genero      = $_REQUEST['genero'];
         $pdr->escolaridad = $_REQUEST['escolaridad'];
-        $pdr->actividad = $_REQUEST['actividad'];
-        $pdr->id_alumno = $_REQUEST['id_alumno'];
+        $pdr->actividad   = $_REQUEST['actividad'];
+        $pdr->id_alumno   = $_REQUEST['id_alumno'];
 
         //Registro al modelo alumno.
         $this->model->Registrar($pdr);
@@ -65,23 +65,23 @@ class PadreController{
         //"Location:" No solamente envía el encabezado al navegador, sino que
         //también devuelve el código de status (302) REDIRECT al
         //navegador
-        header('Location: index.php?c=padre');
+        header('Location: index.php?c=grupo&a=Nuevo');
     }
 
     //Método que modifica el modelo de un alumno.
     public function Editar(){
         $pdr = new padre();
 
-        $pdr->id_padre = $_REQUEST['id_padre'];
-        $pdr->nombres_p = $_REQUEST['nombres_p'];
-        $pdr->a_paternop = $_REQUEST['a_paternop'];
-        $pdr->a_maternop = $_REQUEST['a_maternop'];
-        $pdr->rut_p = $_REQUEST['rut_p'];
-        $pdr->telefono = $_REQUEST['telefono'];
-        $pdr->genero = $_REQUEST['genero'];
+        $pdr->id_padre    = $_REQUEST['id_padre'];
+        $pdr->nombres_p   = $_REQUEST['nombres_p'];
+        $pdr->a_paternop  = $_REQUEST['a_paternop'];
+        $pdr->a_maternop  = $_REQUEST['a_maternop'];
+        $pdr->rut_p       = $_REQUEST['rut_p'];
+        $pdr->telefono    = $_REQUEST['telefono'];
+        $pdr->genero      = $_REQUEST['genero'];
         $pdr->escolaridad = $_REQUEST['escolaridad'];
-        $pdr->actividad = $_REQUEST['actividad'];
-        $pdr->id_alumno = $_REQUEST['id_alumno'];
+        $pdr->actividad   = $_REQUEST['actividad'];
+        $pdr->id_alumno   = $_REQUEST['id_alumno'];
 
         $this->model->Actualizar($pdr);
 
