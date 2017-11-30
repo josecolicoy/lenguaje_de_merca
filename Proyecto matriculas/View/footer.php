@@ -13,8 +13,10 @@
 				                <p class="footer-links">
 					                <a href="index.php">Inicio</a>
 				                </p>
-				                <p>Sistema de matriculas &copy; 2016</p>
+				                <p>Sistema de matriculas &copy; 2017</p>
+
 			                </div>
+                            
 		                </footer>
                 </div>
             </div>
