@@ -2,23 +2,23 @@
 
 <div class="well well-sm text-right">
     <a class="btn btn-primary" href="?c=alumno&a=Nuevo">Nuevo Registro</a>
-    <a class="btn btn-primary" href="?c=padre">Padres</a>
-    <a class="btn btn-primary" href="?c=grupo">Grupo Familiar</a>
-    <a class="btn btn-primary" href="?c=apoderado">Apoderado</a>
-    <a class="btn btn-primary" href="?c=matricula">Matricula</a>
+    <a class="btn btn-success" href="?c=padre">Padres</a>
+    <a class="btn btn-info" href="?c=grupo">Grupo Familiar</a>
+    <a class="btn btn-warning" href="?c=apoderado">Apoderado</a>
+    <a class="btn btn-danger" href="?c=matricula">Matricula</a>
 </div>
 <div class="well well-sm">
 <table class="table table-bordered">
     <thead>
-        <tr>
-            <th style="width:120px;">nombres</th>
-            <th style="width:120px;">apellido paterno</th>
-            <th style="width:120px;">apellido materno</th>
-            <th style="width:120px;">rut</th>
-            <th style="width:120px;">sexo</th>
-            <th style="width:120px;">fecha de nacimiento</th>
-            <th style="width:120px;">Direccion</th>
-            <th style="width:120px;">Comuna</th>
+        <tr style="align-content: center;">
+            <th style="width:120px;text-align: center;">Nombres</th>
+            <th style="width:120px;text-align: center;">Apellido paterno</th>
+            <th style="width:120px;text-align: center;">Apellido materno</th>
+            <th style="width:120px;text-align: center;">Rut</th>
+            <th style="width:80px;text-align: center;">Sexo</th>
+            <th style="width:100px;text-align: center;">Fecha de nacimiento</th>
+            <th style="width:120px;text-align: center;">Direccion</th>
+            <th style="width:120px;text-align: center;">Comuna</th>
         </tr>
     <?php foreach($this->model->Listar() as $r): ?>
         <tr>
