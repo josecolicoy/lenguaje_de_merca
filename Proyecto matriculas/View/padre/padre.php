@@ -3,7 +3,7 @@
 <div class="well well-sm text-right">
     <a class="btn btn-primary" href="?c=alumno&a=Nuevo">Nuevo Registro</a>
     <a class="btn btn-primary" href="?c=padre">Padres</a>
-    <a class="btn btn-primary" href="?c=familiar">Grupo Familiar</a>
+    <a class="btn btn-primary" href="?c=grupo">Grupo Familiar</a>
     <a class="btn btn-primary" href="?c=apoderado">Apoderado</a>
     <a class="btn btn-primary" href="?c=matricula">Matricula</a>
 </div>

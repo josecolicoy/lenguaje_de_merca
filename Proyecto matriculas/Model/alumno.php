@@ -143,7 +143,7 @@ class alumno
 						$data->sexo,
 						$data->fech_nacimiento,
 						$data->direccion_a,
-						$data->comuna_a,
+						$data->comuna_a
                 )
 			);
 		} catch (Exception $e)
