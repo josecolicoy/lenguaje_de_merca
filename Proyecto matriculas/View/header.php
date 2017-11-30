@@ -27,7 +27,7 @@
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
-              <a class="navbar-brand" href="#">Sistema</a>
+              <img src="assets/css/imagenes/icono.png" alt="LOGO" href="?c=alumno" style="width: 50px;height: 50px;">
             </div>
             <ul class="nav navbar-nav">
               <li><a href="?c=alumno"><span class="glyphicon glyphicon-home"></span> HOME</a></li>
