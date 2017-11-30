@@ -39,7 +39,8 @@
                   <div class="form-group">
                     <input type="text" class="form-control" placeholder="Busqueda en sistema">
                   </div>
-                  <button type="submit" class="btn btn-default">Buscar</button>
+                  <button type="button" class="btn btn-info">Buscar</button>
+                 <button type="button" class="btn btn-danger">Cerrar Sesión</button>
             </form>
           </div>
         </nav>
