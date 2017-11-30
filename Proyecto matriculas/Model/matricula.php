@@ -83,7 +83,21 @@ class matricula
             die($e->getMessage());
         }
     }
-
+    public function pdfb($id_matricula)
+    {
+        try
+        {
+            //Sentencia SQL para selección de datos utilizando
+            //la clausula Where para especificar el id del alumno.
+            $stm = $this->pdo->prepare("SELECT matricula.id_matricula,matricula.fecha as fecha, alumno.nombres_a as nombre, alumno.a_paternoa as ape_p,alumno.a_maternoa as ape_m ,alumno.rut_a as rut,curso.nombre_curso as curso,alumno.direccion_a as dire,alumno.fech_nacimiento as fecha_n FROM alumno inner join matricula on alumno.id_alumno=matricula.id_alumno inner join curso on curso.id_curso=matricula.id_curso WHERE matricula.id_matricula = ?");
+            //Ejecución de la sentencia SQL utilizando el parámetro id.
+            $stm->execute(array($id_matricula));
+            return $stm->fetch(PDO::FETCH_OBJ);
+        } catch (Exception $e)
+        {
+            die($e->getMessage());
+        }
+    }
     //Método que actualiza una tupla a partir de la clausula
     //Where y el id del alumno.
     public function Actualizar($data)

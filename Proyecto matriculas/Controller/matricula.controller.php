@@ -24,7 +24,7 @@ class MatriculaController{
 
         //Se obtienen los datos del padre a editar.
         if(isset($_REQUEST['id_matricula'])){
-            $pdr = $this->model->Obtener($_REQUEST['id_matricula']);
+            $pdr = $this->model->pdfb($_REQUEST['id_matricula']);
         }
 
         //Llamado de las vistas.
@@ -40,6 +40,16 @@ class MatriculaController{
         //Llamado de las vistas.
         require_once 'view/header.php';
         require_once 'view/matricula/matricula-nuevo.php';
+        require_once 'view/footer.php';
+    }
+    public function pdf(){
+        $pdr = new matricula();
+        if(isset($_REQUEST['id_matricula'])){
+            $pdr = $this->model->pdfb($_REQUEST['id_matricula']);
+        }
+        //Llamado de las vistas.
+        require_once 'view/header.php';
+        require_once 'view/matricula/matricula-pdf.php';
         require_once 'view/footer.php';
     }
 
